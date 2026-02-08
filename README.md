@@ -32,6 +32,6 @@ Este é meu portfólio pessoal.
 
 ```bash
 git clone https://github.com/caiolucasbittencourt/port.git
-cd my-port
+cd port
 npm install
 npm run dev
