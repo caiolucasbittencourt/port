@@ -7,21 +7,21 @@ import Link from "next/link";
 const projects = [
   {
     title: "My Bookshelf",
-    desc: "Estante de livros virtual.",
+    desc: "Uma estante de livros virtual. Inclui animação de carregamento, slider interativo, navegação por clique nas laterais e cursor customizado",
     url: "https://github.com/caiolucasbittencourt/mybookshelf",
     stack: ["react.svg", "javascript.svg", "vite.png", "tailwindcss.svg"],
   },
   {
-    title: "TCG",
-    desc: "Jogo de cartas online.",
+    title: "TCG Online",
+    desc: "TCG Online é um jogo RPG multiplayer baseado em turnos onde os jogadores montam decks com cartas digitais e participam de duelos.",
     url: "https://www.yugiohrpgonline.com/login",
     stack: ["react.svg", "typescript.svg", "tailwindcss.svg"],
   },
   {
-    title: "Portfólio",
-    desc: "Meu portfólio pessoal",
-    url: "https://github.com/caiolucasbittencourt/port",
-    stack: ["nextjs.png", "react.svg", "typescript.svg", "tailwindcss.svg"],
+    title: "Tesla Semi",
+    desc: "Uma proposta conceitual para o site do Tesla Semi. Ele usa um tema escuro, estrutura de componentes reutilizáveis e layout responsivo.",
+    url: "https://github.com/caiolucasbittencourt/tesla-semi",
+    stack: ["nextjs.png", "react.svg", "javascript.svg", "tailwindcss.svg"],
   },
 ];
 

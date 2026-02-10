@@ -9,20 +9,20 @@ import { X } from "lucide-react";
 const techs = [
   "HTML.svg",
   "CSS.svg",
-  "javaScript.svg",
-  "typeScript.svg",
+  "javascript.svg",
+  "typescript.svg",
   "react.svg",
   "nextjs.png",
   "vuejs.svg",
   "nuxtjs.svg",
   "angularjs.svg",
-  "tailwindCSS.svg",
+  "tailwindcss.svg",
   "nodejs.png",
   "expressjs.png",
   "graphQL.svg",
   "postgreSQL.svg",
   "mySQL.svg",
-  "mongoDB.svg",
+  "mongodb.svg",
   "git.svg",
   "vite.png",
   "Jest.svg",
@@ -31,7 +31,17 @@ const techs = [
 
 const formatName = (filename: string) => {
   const name = filename.split(".")[0];
-  if (name === "githubdark") return "GitHub";
+
+  const exceptions: Record<string, string> = {
+    githubdark: "GitHub",
+    javascript: "JavaScript",
+    typescript: "TypeScript",
+    tailwindcss: "Tailwind CSS",
+    mongodb: "MongoDB",
+  };
+
+  if (exceptions[name]) return exceptions[name];
+
   return name.charAt(0).toUpperCase() + name.slice(1).replace("js", ".js");
 };
 
