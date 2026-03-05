@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Loader2, MessageSquare } from "lucide-react";
+import { FORM_CONFIG } from "@/lib/constants";
+import type { FormStatus } from "@/types";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,12 +14,10 @@ export default function Contact() {
     message: "",
   });
 
-  const [status, setStatus] = useState<
-    "IDLE" | "LOADING" | "SUCCESS" | "ERROR"
-  >("IDLE");
+  const [status, setStatus] = useState<FormStatus>("IDLE");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -28,21 +28,18 @@ export default function Contact() {
     setStatus("LOADING");
 
     try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/caiolucasbittencourt@hotmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            ...formData,
-            _subject: `Novo contato de: ${formData.name} - ${formData.subject}`,
-            _captcha: "false",
-          }),
+      const response = await fetch(FORM_CONFIG.endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-      );
+        body: JSON.stringify({
+          ...formData,
+          _subject: `Novo contato de: ${formData.name} - ${formData.subject}`,
+          _captcha: "false",
+        }),
+      });
 
       if (response.ok) {
         setStatus("SUCCESS");
@@ -65,16 +62,16 @@ export default function Contact() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: 0.2, duration: 0.5 }}
-      className="col-span-12 hover-card rounded-xl p-6 md:p-8 mt-4 relative overflow-hidden"
+      transition={{ duration: 0.4 }}
+      className="hover-card relative col-span-12 mt-4 overflow-hidden rounded-xl p-6 md:p-8"
     >
       <div className="relative z-10">
-        <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <h3 className="mb-6 flex items-center gap-2 text-xl font-bold text-white">
           Vamos falar sobre seu próximo projeto
         </h3>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {/* nome */}
             <input
               type="text"
@@ -124,11 +121,11 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "LOADING" || status === "SUCCESS"}
-            className="bg-white/5 text-white border border-white/10 font-medium rounded-lg px-6 py-3 text-sm flex items-center justify-center gap-2 hover:bg-white/10 hover:border-white/50 transition-all w-full md:w-auto self-end disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+            className="flex w-full cursor-pointer items-center justify-center gap-2 self-end rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50 md:w-auto"
           >
             {status === "LOADING" ? (
               <>
-                <Loader2 className="w-4 h-4 animate-spin" /> Enviando...
+                <Loader2 className="h-4 w-4 animate-spin" /> Enviando...
               </>
             ) : status === "SUCCESS" ? (
               <>Mensagem enviada!</>
@@ -152,7 +149,7 @@ export default function Contact() {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-red-400 text-xs text-center font-medium mt-2 bg-red-500/10 p-2 rounded border border-red-500/20"
+              className="mt-2 rounded border border-red-500/20 bg-red-500/10 p-2 text-center text-xs font-medium text-red-400"
             >
               Ocorreu um erro ao enviar. Por favor, tente novamente mais tarde.
             </motion.p>

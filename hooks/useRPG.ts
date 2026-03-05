@@ -1,25 +1,10 @@
 "use client";
 
 import { useState } from "react";
-
-// exported types
-export type Location =
-  | "VILA"
-  | "LOJA"
-  | "FLORESTA"
-  | "BATALHA"
-  | "VITORIA"
-  | "DERROTA";
-
-export interface Enemy {
-  name: string;
-  level: number;
-  maxHp: number;
-  currentHp: number;
-}
+import type { Location, Enemy, Weapon, EnemyConfig } from "@/types";
 
 // constants
-const WEAPONS = [
+const WEAPONS: Weapon[] = [
   { name: "Mãos vazias", power: 1 },
   { name: "Espada Enferrujada", power: 5 },
   { name: "Lança de Guarda", power: 10 },
@@ -27,7 +12,7 @@ const WEAPONS = [
   { name: "Besta Matadora", power: 100 },
 ];
 
-const ENEMIES = [
+const ENEMIES: EnemyConfig[] = [
   { name: "Goblin", level: 5, hp: 20 },
   { name: "Minotauro", level: 10, hp: 250 },
   { name: "Dragão Ancestral", level: 20, hp: 500 },
@@ -120,7 +105,7 @@ export const useRPG = () => {
     // enemy turn
     const enemyDmg = Math.max(
       0,
-      enemy.level * 2 - Math.floor(Math.random() * level),
+      enemy.level * 2 - Math.floor(Math.random() * level)
     );
     setHp((h) => {
       const newHp = h - enemyDmg;

@@ -3,64 +3,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-// social media
-const socialLinks = [
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/caiolucasbittencourt/",
-    icon: "/linkedin.png",
-    color: "#0077b5",
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/caiolucasbittencourt",
-    icon: "/githubdark.svg",
-    invert: true,
-  },
-  {
-    name: "Discord",
-    url: "https://discord.gg/programador",
-    icon: "/discord.svg",
-    color: "#5865F2",
-  },
-  {
-    name: "WhatsApp",
-    url: "https://wa.me/5599996513294",
-    icon: "/whatsapp.png",
-    color: "#25D366",
-  },
-];
-
-// technologies
-const techs = [
-  "html.svg",
-  "css.svg",
-  "javascript.svg",
-  "typescript.svg",
-  "react.svg",
-  "nextjs.png",
-  "vuejs.svg",
-  "nuxtjs.svg",
-  "angularjs.svg",
-  "tailwindcss.svg",
-  "nodejs.png",
-  "expressjs.png",
-  "graphql.svg",
-  "postgresql.svg",
-  "mysql.svg",
-  "mongodb.svg",
-  "git.svg",
-  "vite.png",
-  "figma.svg",
-];
+import { SOCIAL_CARDS } from "@/lib/constants";
 
 export default function Hero() {
   return (
     <section className="space-y-4">
       {/* Grid */}
       <div className="grid grid-cols-12 gap-4">
-        {socialLinks.map((link, index) => (
+        {SOCIAL_CARDS.map((link, index) => (
           <motion.div
             key={link.name}
             initial={{ opacity: 0, y: 20 }}
@@ -72,10 +22,10 @@ export default function Hero() {
               href={link.url}
               target="_blank"
               style={{ "--hover-color": link.color } as React.CSSProperties}
-              className="hover-card flex items-center justify-center rounded-xl p-6 group h-full relative overflow-hidden hover:!border-[var(--hover-color)] transition-colors duration-300"
+              className="hover-card group relative flex h-full items-center justify-center overflow-hidden rounded-xl p-6 transition-colors duration-300 hover:!border-[var(--hover-color)]"
             >
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-20"
                 style={{ backgroundColor: link.color || "#ffffff" }}
               />
               <div className="relative h-10 w-10">
@@ -83,7 +33,7 @@ export default function Hero() {
                   src={link.icon}
                   alt={link.name}
                   fill
-                  className={`object-contain transition-all duration-300 opacity-80 group-hover:opacity-100 ${link.invert ? "invert" : ""}`}
+                  className={`object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 ${link.invert ? "invert" : ""}`}
                 />
               </div>
             </Link>
@@ -94,17 +44,17 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="col-span-12 hover-card rounded-xl p-8 text-justify"
+          transition={{ delay: 0.25 }}
+          className="hover-card col-span-12 rounded-xl p-8 text-justify"
         >
-          <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed">
-            Oi, meu nome é <span className="text-white font-medium">Caio</span>!
-            Eu sou brasileiro, graduando em{" "}
-            <span className="text-white font-medium">
+          <p className="text-lg leading-relaxed font-light text-gray-500 md:text-xl">
+            Oi, meu nome é <span className="font-medium text-white">Caio</span>!
+            Eu sou graduando em{" "}
+            <span className="font-medium text-white">
               Análise e Desenvolvimento de Sistemas
             </span>{" "}
             e{" "}
-            <span className="text-white font-medium">
+            <span className="font-medium text-white">
               Desenvolvedor Full Stack
             </span>{" "}
             focado na construção de aplicações web completas, escaláveis e de
@@ -112,7 +62,7 @@ export default function Hero() {
             <br />
             <br />
             Domino o ecossistema{" "}
-            <span className="text-white font-medium">
+            <span className="font-medium text-white">
               JavaScript/TypeScript
             </span>{" "}
             combinando interfaces modernas com lógica robusta do lado do

@@ -3,7 +3,8 @@
 import { useRef, useEffect } from "react";
 import { Sword, Heart, Coins, Skull } from "lucide-react";
 import { motion } from "framer-motion";
-import { useRPG } from "../hooks/useRPG";
+import { useRPG } from "@/hooks/useRPG";
+import type { StatusCardProps, ButtonVariant } from "@/types";
 
 export default function Game() {
   // hook connection
@@ -39,47 +40,57 @@ export default function Game() {
       case "VILA":
         return (
           <>
-            <Button onClick={() => setLocation("LOJA")}>Ir para a Loja</Button>
-            <Button onClick={() => setLocation("FLORESTA")}>
+            <GameButton onClick={() => setLocation("LOJA")}>
+              Ir para a Loja
+            </GameButton>
+            <GameButton onClick={() => setLocation("FLORESTA")}>
               Explorar a Floresta
-            </Button>
-            <Button onClick={() => startFight(2)} variant="danger">
+            </GameButton>
+            <GameButton onClick={() => startFight(2)} variant="danger">
               Enfrentar o Dragão
-            </Button>
+            </GameButton>
           </>
         );
       case "LOJA":
         return (
           <>
-            <Button onClick={heal}>Comprar Poção (10g)</Button>
-            <Button onClick={buyWeapon}>Comprar Arma (30g)</Button>
-            <Button onClick={() => setLocation("VILA")}>Voltar para a praça</Button>
+            <GameButton onClick={heal}>Comprar Poção (10g)</GameButton>
+            <GameButton onClick={buyWeapon}>Comprar Arma (30g)</GameButton>
+            <GameButton onClick={() => setLocation("VILA")}>
+              Voltar para a praça
+            </GameButton>
           </>
         );
       case "FLORESTA":
         return (
           <>
-            <Button onClick={() => startFight(0)}>Lutar contra Goblin</Button>
-            <Button onClick={() => startFight(1)}>Lutar contra Minotauro</Button>
-            <Button onClick={() => setLocation("VILA")}>Fugir</Button>
+            <GameButton onClick={() => startFight(0)}>
+              Lutar contra Goblin
+            </GameButton>
+            <GameButton onClick={() => startFight(1)}>
+              Lutar contra Minotauro
+            </GameButton>
+            <GameButton onClick={() => setLocation("VILA")}>Fugir</GameButton>
           </>
         );
       case "BATALHA":
         return (
           <>
-            <Button onClick={attack} variant="danger">
+            <GameButton onClick={attack} variant="danger">
               Atacar
-            </Button>
-            <Button onClick={() => addLog("Você esquivou!")}>Esquivar</Button>
-            <Button onClick={() => setLocation("VILA")}>Fugir</Button>
+            </GameButton>
+            <GameButton onClick={() => addLog("Você esquivou!")}>
+              Esquivar
+            </GameButton>
+            <GameButton onClick={() => setLocation("VILA")}>Fugir</GameButton>
           </>
         );
       case "VITORIA":
       case "DERROTA":
         return (
-          <Button onClick={resetGame} variant="primary">
+          <GameButton onClick={resetGame} variant="primary">
             Jogar Novamente
-          </Button>
+          </GameButton>
         );
       default:
         return null;
@@ -91,8 +102,8 @@ export default function Game() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="hover-card rounded-xl p-6 md:p-8 flex flex-col gap-5 border-white/10 relative overflow-hidden mt-4"
+      transition={{ duration: 0.4 }}
+      className="hover-card relative mt-4 flex flex-col gap-5 overflow-hidden rounded-xl border-white/10 p-6 md:p-8"
     >
       {/* player status */}
       <div className="grid grid-cols-3 gap-3">
@@ -124,28 +135,28 @@ export default function Game() {
 
       {/* enemy status */}
       <div
-        className={`transition-all duration-500 ${location === "BATALHA" ? "opacity-100 h-20" : "opacity-0 h-0 overflow-hidden"}`}
+        className={`transition-all duration-500 ${location === "BATALHA" ? "h-20 opacity-100" : "h-0 overflow-hidden opacity-0"}`}
       >
         {enemy && (
-          <div className="hover-card bg-red-900/10 border border-red-500/20 rounded-xl p-3 flex justify-between items-center">
+          <div className="hover-card flex items-center justify-between rounded-xl border border-red-500/20 bg-red-900/10 p-3">
             <div className="flex items-center gap-3">
-              <div className="bg-red-500/10 p-2 rounded-full border border-red-500/20 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
-                <Skull className="text-red-400 w-5 h-5" />
+              <div className="rounded-full border border-red-500/20 bg-red-500/10 p-2 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
+                <Skull className="h-5 w-5 text-red-400" />
               </div>
               <div>
-                <span className="text-[10px] text-red-300 uppercase font-bold tracking-wider">
+                <span className="text-[10px] font-bold tracking-wider text-red-300 uppercase">
                   Inimigo
                 </span>
-                <strong className="block text-white text-lg tracking-tight">
+                <strong className="block text-lg tracking-tight text-white">
                   {enemy.name}
                 </strong>
               </div>
             </div>
-            <div className="text-right pr-2">
-              <span className="text-[10px] text-red-300 uppercase font-bold block mb-1">
+            <div className="pr-2 text-right">
+              <span className="mb-1 block text-[10px] font-bold text-red-300 uppercase">
                 HP
               </span>
-              <div className="text-2xl font-black text-red-500/90 drop-shadow-md tabular-nums">
+              <div className="text-2xl font-black text-red-500/90 tabular-nums drop-shadow-md">
                 {enemy.currentHp}
               </div>
             </div>
@@ -156,14 +167,14 @@ export default function Game() {
       {/* game log */}
       <div
         ref={logContainerRef}
-        className="hover-card rounded-xl p-4 h-[160px] flex flex-col gap-2 overflow-y-auto game-scroll bg-black/20 shadow-inner"
+        className="hover-card game-scroll flex h-[160px] flex-col gap-2 overflow-y-auto rounded-xl bg-black/20 p-4 shadow-inner"
       >
         {logs.map((log, i) => (
           <motion.p
             key={i}
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-sm text-gray-300 font-light border-b border-white/5 pb-1 last:border-0 leading-relaxed"
+            className="border-b border-white/5 pb-1 text-sm leading-relaxed font-light text-gray-300 last:border-0"
           >
             {log}
           </motion.p>
@@ -171,21 +182,28 @@ export default function Game() {
       </div>
 
       {/* action buttons */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+      <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-3">
         {renderActions()}
       </div>
     </motion.div>
   );
 }
 
-function StatusCard({ icon: Icon, label, value, color, border, bg }: any) {
+function StatusCard({
+  icon: Icon,
+  label,
+  value,
+  color,
+  border,
+  bg,
+}: StatusCardProps) {
   return (
     <div
-      className={`hover-card rounded-xl p-3 flex flex-col items-center justify-center border-t-2 ${border} bg-gradient-to-b ${bg} to-transparent`}
+      className={`hover-card flex flex-col items-center justify-center rounded-xl border-t-2 p-3 ${border} bg-gradient-to-b ${bg} to-transparent`}
     >
-      <div className="flex items-center gap-1 mb-1">
-        <Icon className={`w-3 h-3 ${color}`} />
-        <span className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">
+      <div className="mb-1 flex items-center gap-1">
+        <Icon className={`h-3 w-3 ${color}`} />
+        <span className="text-[10px] font-semibold tracking-widest text-gray-400 uppercase">
           {label}
         </span>
       </div>
@@ -194,8 +212,18 @@ function StatusCard({ icon: Icon, label, value, color, border, bg }: any) {
   );
 }
 
-function Button({ children, onClick, variant = "default" }: any) {
-  const styles = {
+interface GameButtonProps {
+  children: React.ReactNode;
+  onClick: () => void;
+  variant?: ButtonVariant;
+}
+
+function GameButton({
+  children,
+  onClick,
+  variant = "default",
+}: GameButtonProps) {
+  const styles: Record<ButtonVariant, string> = {
     default:
       "bg-white/5 hover:bg-white/10 border-white/10 hover:border-white/50 cursor-pointer",
     danger:
@@ -207,7 +235,7 @@ function Button({ children, onClick, variant = "default" }: any) {
   return (
     <button
       onClick={onClick}
-      className={`h-14 font-medium rounded-xl px-2 text-xs sm:text-sm transition-all border uppercase tracking-wide flex items-center justify-center ${styles[variant as keyof typeof styles]} text-white`}
+      className={`flex h-14 items-center justify-center rounded-xl border px-2 text-xs font-medium tracking-wide uppercase transition-all sm:text-sm ${styles[variant]} text-white`}
     >
       {children}
     </button>
