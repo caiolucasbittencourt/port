@@ -35,3 +35,4 @@ git clone https://github.com/caiolucasbittencourt/port.git
 cd port
 npm install
 npm run dev
+```
