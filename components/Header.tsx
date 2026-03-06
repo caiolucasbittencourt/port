@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { X } from "lucide-react";
+import { X, Menu } from "lucide-react";
 import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/constants";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isPhotoOpen, setIsPhotoOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -19,7 +20,7 @@ export default function Header() {
 
   // Block scroll when modal is open
   useEffect(() => {
-    if (isPhotoOpen) {
+    if (isPhotoOpen || isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -27,7 +28,7 @@ export default function Header() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isPhotoOpen]);
+  }, [isPhotoOpen, isMenuOpen]);
 
   return (
     <>
@@ -59,16 +60,107 @@ export default function Header() {
             </Link>
           </div>
 
-          <a
-            href={SOCIAL_LINKS.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-black/20 transition-all hover:border-white/50 hover:bg-white/10"
+          {/* Navigation Links */}
+          <nav className="hidden items-center gap-6 md:flex">
+            <Link
+              href="/"
+              className="text-sm text-gray-400 transition-colors hover:text-white"
+            >
+              Home
+            </Link>
+            <Link
+              href="/technologies"
+              className="text-sm text-gray-400 transition-colors hover:text-white"
+            >
+              Technologies
+            </Link>
+            <Link
+              href="/projects"
+              className="text-sm text-gray-400 transition-colors hover:text-white"
+            >
+              Projects
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm text-gray-400 transition-colors hover:text-white"
+            >
+              Blog
+            </Link>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="flex cursor-pointer items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 text-gray-400 transition-colors hover:text-white md:hidden"
           >
-            View CV
-          </a>
+            <Menu className="h-5 w-5" />
+          </button>
         </div>
       </header>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsMenuOpen(false)}
+            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm md:hidden"
+          >
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="absolute top-0 right-0 h-full w-64 border-l border-white/10 bg-[#0A0A0A] p-6"
+            >
+              {/* Close button */}
+              <div className="mb-8 flex justify-end">
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="cursor-pointer rounded-lg border border-white/10 bg-white/5 p-2 text-gray-400 transition-colors hover:text-white"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+
+              {/* Menu Links */}
+              <nav className="flex flex-col gap-4">
+                <Link
+                  href="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-lg text-gray-400 transition-colors hover:text-white"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/technologies"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-lg text-gray-400 transition-colors hover:text-white"
+                >
+                  Technologies
+                </Link>
+                <Link
+                  href="/projects"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-lg text-gray-400 transition-colors hover:text-white"
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-lg text-gray-400 transition-colors hover:text-white"
+                >
+                  Blog
+                </Link>
+              </nav>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Photo Modal */}
       <AnimatePresence>

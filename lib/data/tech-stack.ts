@@ -18,7 +18,7 @@ export const TECHNOLOGIES = [
   "mongodb.svg",
   "git.svg",
   "vite.png",
-  "Jest.svg",
+  "jest.svg",
   "figma.svg",
 ] as const;
 

@@ -15,7 +15,7 @@ export default function Hero() {
             key={link.name}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.05 }}
+            transition={{ duration: 0.4 }}
             className="col-span-6 md:col-span-3"
           >
             <Link
@@ -44,7 +44,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
+          transition={{ duration: 0.4 }}
           className="hover-card col-span-12 rounded-xl p-8 text-justify"
         >
           <p className="text-lg leading-relaxed font-light text-gray-500 md:text-xl">

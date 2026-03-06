@@ -8,19 +8,18 @@ import { PROJECTS, INVERTED_ICONS } from "@/lib/data/projects";
 export default function Projects() {
   return (
     <section className="mt-4 grid grid-cols-12 gap-4">
-      {PROJECTS.map((project, index) => (
+      {PROJECTS.slice(0, 3).map((project, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: index * 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
           className="col-span-12 md:col-span-4"
         >
           <Link
             href={project.url}
             target="_blank"
-            className="hover-card group relative block h-full rounded-xl p-8 transition-transform hover:-translate-y-1"
+            className="hover-card hover-card-interactive group relative block h-full rounded-xl p-8"
           >
             <h3 className="mb-2 text-lg font-bold text-white transition-colors group-hover:text-white">
               {project.title}

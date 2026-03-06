@@ -22,6 +22,55 @@ export const PROJECTS: Project[] = [
     url: "https://github.com/caiolucasbittencourt/bookstore-api-express",
     stack: ["nodejs.png", "expressjs.png", "mongodb.svg", "jest.svg"],
   },
+  {
+    title: "Tesla Semi",
+    description:
+      "Projeto que une design (UX/UI) e desenvolvimento front-end. Uma proposta conceitual para o site do Tesla Semi, construída com Tailwind CSS.",
+    url: "https://tesla-semi-rust.vercel.app/",
+    stack: [""],
+  },
+  {
+    title: "My Bookshelf",
+    description:
+      "Projeto pessoal construído para ser uma estante de livros virtual. Uma exploração de interações e animações com Framer Motion e design responsivo com Tailwind CSS.",
+    url: "https://github.com/caiolucasbittencourt/mybookshelf",
+    stack: [""],
+  },
+  {
+    title: "DEVagas",
+    description:
+      "Newsletter de vagas de tecnologia.",
+    url: "https://github.com/caiolucasbittencourt/devagas",
+    stack: [""],
+  },
+  {
+    title: "F1 API",
+    description:
+      "API para consultar informações do campeonato de Fórmula 1, com dados de equipes, pilotos e circuitos.",
+    url: "https://github.com/caiolucasbittencourt/f1-api-fastify",
+    stack: [""],
+  },
+  {
+    title: "Masterclass Valorant Pro",
+    description:
+      "Landing page para uma campanha de captação de leads de uma masterclass de Valorant.",
+    url: "https://github.com/caiolucasbittencourt/masterclass-valorant-pro",
+    stack: [""],
+  },
+  {
+    title: "Laboracin",
+    description:
+      "Site institucional para um laboratório de análises clínicas, desenvolvida para ser moderna e totalmente responsiva.",
+    url: "https://github.com/caiolucasbittencourt/laboracin",
+    stack: [""],
+  },
+  {
+    title: "Portfólio Pessoal",
+    description:
+      "Este é meu portfólio pessoal.",
+    url: "https://github.com/caiolucasbittencourt/port",
+    stack: [""],
+  },
 ];
 
 // Icons that need invert filter on dark background

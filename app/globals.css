@@ -1,4 +1,17 @@
 @import "tailwindcss";
+
+@layer base {
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+  }
+
+  ::-moz-selection {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+  }
+}
+
 :root {
   --background: #050505;
   --foreground: #d1d5db;

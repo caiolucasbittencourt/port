@@ -1,7 +1,7 @@
 // Site configuration
 export const SITE_CONFIG = {
   name: "Caio Lucas Bittencourt",
-  shortName: "Caio Bittencourt",
+  shortName: "<Caio Bittencourt />",
   description: "Desenvolvedor Full Stack",
   email: "caiolucasbittencourt@hotmail.com",
 } as const;
