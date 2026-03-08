@@ -38,8 +38,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "DEVagas",
-    description:
-      "Newsletter de vagas de tecnologia.",
+    description: "Newsletter de vagas de tecnologia.",
     url: "https://github.com/caiolucasbittencourt/devagas",
     stack: [""],
   },
@@ -66,8 +65,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Portfólio Pessoal",
-    description:
-      "Este é meu portfólio pessoal.",
+    description: "Este é meu portfólio pessoal.",
     url: "https://github.com/caiolucasbittencourt/port",
     stack: [""],
   },
