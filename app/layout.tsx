@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Caio Bittencourt | Desenvolvedor Full Stack",
-  description: "Portfólio de Caio Bittencourt, Desenvolvedor Full Stack.",
+  title: "Caio Bittencourt | Desenvolvedor Full-stack",
+  description: "Portfólio de Caio Bittencourt, Desenvolvedor Full-stack.",
   icons: {
     icon: "/favicon.png",
   },

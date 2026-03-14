@@ -48,25 +48,23 @@ export default function Hero() {
           className="hover-card col-span-12 rounded-xl p-8 text-justify"
         >
           <p className="text-lg leading-relaxed font-light text-gray-500 md:text-xl">
-            Oi, meu nome é <span className="font-medium text-white">Caio</span>!
-            Eu sou graduando em{" "}
+            <span className="font-medium text-white">
+              Desenvolvedor Full-stack
+            </span>{" "}
+            e graduando em{" "}
             <span className="font-medium text-white">
               Análise e Desenvolvimento de Sistemas
-            </span>{" "}
-            e{" "}
-            <span className="font-medium text-white">
-              Desenvolvedor Full Stack
-            </span>{" "}
-            focado na construção de aplicações web completas, escaláveis e de
-            alto desempenho.
+            </span>
+            , capacitado para atuar em todas as etapas de um projeto de
+            software. <br />
             <br />
-            <br />
-            Domino o ecossistema{" "}
+            Focado no ecossistema{" "}
             <span className="font-medium text-white">
-              JavaScript/TypeScript
-            </span>{" "}
-            combinando interfaces modernas com lógica robusta do lado do
-            servidor e bancos de dados relacionais.
+              JavaScript/TypeScript (React, Node.js)
+            </span>
+            , construo aplicações web completas de ponta a ponta: desde a
+            criação de interfaces modernas para o usuário até a estruturação de
+            servidores e bancos de dados relacionais.
           </p>
         </motion.div>
       </div>
