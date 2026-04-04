@@ -14,7 +14,6 @@ export default function Home() {
       <div className="mx-auto w-full max-w-4xl grow pt-24 pb-6">
         <Hero />
         <TechStack />
-        <Projects />
         <BlogPosts />
         <Footer />
       </div>

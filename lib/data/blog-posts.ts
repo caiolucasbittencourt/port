@@ -97,7 +97,7 @@ Acho que essa crise é mais sobre ego do que sobre carreira de verdade. Eu quero
 
 ### O plano B que me conforta
 
-Uma ideia que me conforta é fazer uma pós em Engenharia de Software depois. Tipo termino o ADS rápido e aí faço uma especialização pra "compensar"
+Uma ideia que me conforta é fazer uma pós em Engenharia de Software depois. Tipo termino ADS rápido e aí faço uma especialização pra "compensar"
 
 ### Provavelmente vou continuar ADS
 
