@@ -5,12 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BLOG_POSTS, formatDate } from "@/lib/data/blog-posts";
 
-// Selecionar 3 posts específicos para a home
-const HOME_POSTS = [
-  BLOG_POSTS[0], // Introdução ao Next.js 15
-  BLOG_POSTS[1], // Dominando TypeScript
-  BLOG_POSTS[2], // React Server Components
-];
+const HOME_POSTS = [BLOG_POSTS[0], BLOG_POSTS[1], BLOG_POSTS[2]];
 
 export default function BlogPosts() {
   return (
