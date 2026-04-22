@@ -14,6 +14,83 @@ export interface BlogPost {
 // Sample blog posts
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "o-peixe-babel-definitivo-front-e-back-falando-o-mesmo-idioma",
+    title: "BABEL FISH",
+    description:
+      "Como a unificação da stack elimina o atrito e reduz o custo cognitivo",
+    image: "/blog/babelfish.gif",
+    date: "2026-04-22",
+    author: "Caio Bittencourt",
+    readTime: "6 min",
+    tags: ["JavaScript", "TypeScript", "Node.js", "Arquitetura", "Opinião"],
+    content: `
+## O que é o babel fish (versão dev)?
+
+No Guia do Mochileiro das Galáxias, o babel fish é um bicho que traduz qualquer idioma em tempo real
+
+Pra mim, usar JavaScript e TypeScript no front e no back é isso. Não é sobre modinha. É sobre não passar o dia inteiro traduzindo pensamento
+
+### Stack misturada
+
+Eu já trabalhei no esquema front em uma linguagem e back em outra. Funciona, claro. Só que cansa mais do que parece
+
+Quando eu engrenava no jeito de pensar de um lado, precisava trocar o chip pro outro. No fim do dia eu tava morto
+
+E o pior nem era escrever código
+
+- Validação repetida
+
+- Tipo com nome diferente em cada lado
+
+- Bug que "não é do front" e também "não é do back"
+
+Esse empurra-empurra de bug me chateia num nível...
+
+### Quando tudo é JS/TS
+
+Depois que padronizei em JS/TS, algumas coisas ficaram menos dramáticas
+
+- **Mesmo modelo mental** Função, objeto, async, promise. A base é a mesma em qualquer camada
+- **Tipos de ponta a ponta** Com TypeScript, dá pra compartilhar contratos e reduzir aquele clássico "funciona aqui, quebra ali"
+- **Código compartilhado de verdade** Schemas, validações, utilitários e regras podem viver em um lugar só
+- **Onboarding mais rápido** Menos contexto pra aprender, mais tempo construindo coisa útil
+
+No fim, sua energia vai pra arquitetura, produto e experiência
+
+### A toalha do Node.js
+
+No Guia, a toalha é considerada "o item mais indispensável para um viajante interestelar"
+
+No meu mundo, Node.js virou isso
+
+Precisou subir API rápido? Node
+
+Precisou integrar com o front? Node
+
+Preciso manter ritmo com time pequeno? Node com TypeScript normalmente resolve sem muita firula
+
+### "Então qualquer outra linguagem é ruim?"
+
+Não, claro que não
+
+Tem cenário em que Go, C#, Java, Python e várias outras opções fazem mais sentido
+
+Não tô tentando converter ninguém. Só defendendo uma coisa simples, se você pode reduzir custo cognitivo, reduza
+
+No dia a dia, o que quebra time nem sempre é performance. Muitas vezes é atrito
+
+### IN SHORT
+
+Front e back no mesmo idioma não te transforma em gênio
+
+Mas corta ruído, reduz retrabalho e deixa mais energia pra decidir o que realmente importa
+
+No fim era só isso
+
+Menos tradução, mais entrega
+    `,
+  },
+  {
     slug: "de-programador-a-tony-stark",
     title: "O medo de ser vibe coder + a vontade de ser o Tony Stark",
     description:
