@@ -49,7 +49,7 @@ export default function Hero() {
         >
           <p className="text-lg leading-relaxed font-light text-gray-500 md:text-xl">
             <span className="font-medium text-white">
-              Desenvolvedor Full-stack
+              Desenvolvedor Full-Stack
             </span>{" "}
             e graduando em{" "}
             <span className="font-medium text-white">

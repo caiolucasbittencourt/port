@@ -72,13 +72,13 @@ export default function Header() {
               href="/technologies"
               className="text-sm text-gray-400 transition-colors hover:text-white"
             >
-              Technologies
+              Tecnologias
             </Link>
             <Link
               href="/projects"
               className="text-sm text-gray-400 transition-colors hover:text-white"
             >
-              Projects
+              Projetos
             </Link>
             <Link
               href="/blog"
