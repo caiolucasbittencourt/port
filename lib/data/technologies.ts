@@ -22,8 +22,6 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
       { name: "TypeScript", icon: "typescript.svg" },
       { name: "React", icon: "react.svg" },
       { name: "Next.js", icon: "nextjs.png" },
-      { name: "Vue.js", icon: "vuejs.svg" },
-      { name: "Nuxt.js", icon: "nuxtjs.svg" },
       { name: "Angular", icon: "angularjs.svg" },
       { name: "Tailwind CSS", icon: "tailwindcss.svg" },
     ],
@@ -34,25 +32,32 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
     technologies: [
       { name: "Node.js", icon: "nodejs.png" },
       { name: "Express.js", icon: "expressjs.png" },
+      { name: "NestJS", icon: "nestjs.svg" },
       { name: "GraphQL", icon: "graphQL.svg" },
     ],
   },
   {
     title: "Banco de Dados",
-    description: "Sistemas de gerenciamento de banco de dados",
+    description: "Banco de dados, ORM e plataformas BaaS",
     technologies: [
       { name: "PostgreSQL", icon: "postgreSQL.svg" },
       { name: "MySQL", icon: "mySQL.svg" },
       { name: "MongoDB", icon: "mongodb.svg" },
+      { name: "Prisma", icon: "prisma.png" },
+      { name: "Firebase", icon: "firebase.svg" },
+      { name: "Supabase", icon: "supabase.svg" },
     ],
   },
   {
-    title: "Ferramentas & DevOps",
-    description: "Ferramentas de desenvolvimento e produtividade",
+    title: "Ferramentas",
+    description: "Ferramentas de desenvolvimento, colaboração e deploy",
     technologies: [
       { name: "Git", icon: "git.svg" },
-      { name: "Vite", icon: "vite.png" },
-      { name: "Jest", icon: "Jest.svg" },
+      { name: "GitHub", icon: "githubdark.svg" },
+      { name: "Vite", icon: "vite.svg" },
+      { name: "Jest", icon: "jest.svg" },
+      { name: "Docker", icon: "docker.svg" },
+      { name: "Vercel", icon: "vercel.svg" },
       { name: "Figma", icon: "figma.svg" },
     ],
   },
@@ -65,6 +70,7 @@ export const INVERTED_TECH_ICONS = [
   "mySQL.svg",
   "graphQL.svg",
   "nextjs.png",
+  "prisma.png",
 ];
 
 // Check if icon needs invert filter
