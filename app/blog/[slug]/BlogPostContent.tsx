@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BlogPost, formatDate } from "@/lib/data/blog-posts";
@@ -47,20 +47,15 @@ export default function BlogPostContent({ post }: Props) {
               {post.title}
             </h1>
 
+            {/* Description */}
+            <p className="mb-4 text-sm text-gray-400 md:text-base">
+              {post.description}
+            </p>
+
             {/* Meta */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-              <div className="flex items-center gap-1.5">
-                <User className="h-4 w-4" />
-                <span>{post.author}</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Calendar className="h-4 w-4" />
-                <span>{formatDate(post.date)}</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Clock className="h-4 w-4" />
-                <span>{post.readTime} de leitura</span>
-              </div>
+              <span>{formatDate(post.date)}</span>
+              <span>{post.readTime} de leitura</span>
             </div>
           </header>
 
