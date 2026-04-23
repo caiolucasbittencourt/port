@@ -1,9 +1,27 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Header from "../components/Header";
+import SocialCards from "../components/SocialCards";
 import Hero from "../components/Hero";
 import TechStack from "../components/TechStack";
-import Projects from "../components/Projects";
 import BlogPosts from "../components/BlogPosts";
 import Footer from "../components/Footer";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Home() {
   return (
@@ -12,9 +30,29 @@ export default function Home() {
       <Header />
 
       <div className="mx-auto w-full max-w-4xl grow pt-24 pb-6">
-        <Hero />
-        <TechStack />
-        <BlogPosts />
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col gap-4"
+        >
+          <motion.section variants={itemVariants}>
+            <SocialCards />
+          </motion.section>
+
+          <motion.section variants={itemVariants}>
+            <Hero />
+          </motion.section>
+
+          <motion.section variants={itemVariants}>
+            <TechStack />
+          </motion.section>
+
+          <motion.section variants={itemVariants}>
+            <BlogPosts />
+          </motion.section>
+        </motion.div>
+
         <Footer />
       </div>
     </main>

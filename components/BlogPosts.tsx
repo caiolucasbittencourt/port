@@ -9,8 +9,8 @@ const HOME_POSTS = [BLOG_POSTS[0], BLOG_POSTS[1], BLOG_POSTS[2]];
 
 export default function BlogPosts() {
   return (
-    <section className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {HOME_POSTS.map((post, index) => (
+    <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {HOME_POSTS.map((post) => (
         <motion.article
           key={post.slug}
           initial={{ opacity: 0, y: 20 }}

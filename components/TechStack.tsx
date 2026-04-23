@@ -10,15 +10,12 @@ export default function TechStack() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="hover-card group relative col-span-12 mx-auto mt-4 w-full max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl p-8"
+      className="hover-card group relative col-span-12 mx-auto w-full max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl p-8"
     >
       {/* scroll */}
       <div className="animate-scroll flex w-max gap-8 group-hover:[animation-play-state:paused] md:gap-12">
         {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech, i) => (
-          <div
-            key={i}
-            className="relative h-8 w-8 flex-shrink-0 md:h-10 md:w-10"
-          >
+          <div key={i} className="relative h-8 w-8 shrink-0 md:h-10 md:w-10">
             <Image
               src={`/${tech}`}
               alt="Tech icon"
