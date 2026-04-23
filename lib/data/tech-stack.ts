@@ -20,6 +20,7 @@ export const TECHNOLOGIES = [
   "supabase.svg",
   "docker.svg",
   "vercel.svg",
+  "aws.svg",
   "git.svg",
   "githubdark.svg",
   "vite.svg",

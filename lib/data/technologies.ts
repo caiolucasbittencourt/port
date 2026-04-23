@@ -13,8 +13,7 @@ export interface TechnologyCategory {
 export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
   {
     title: "Front-end",
-    description:
-      "Tecnologias para construção de interfaces modernas e responsivas",
+    description: "Linguagens, frameworks e bibliotecas de interface",
     technologies: [
       { name: "HTML", icon: "HTML.svg" },
       { name: "CSS", icon: "CSS.svg" },
@@ -28,7 +27,7 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
   },
   {
     title: "Back-end",
-    description: "Tecnologias para desenvolvimento de APIs e servidores",
+    description: "Ambientes de execução, frameworks e arquitetura de APIs",
     technologies: [
       { name: "Node.js", icon: "nodejs.png" },
       { name: "Express.js", icon: "expressjs.png" },
@@ -57,6 +56,7 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
       { name: "Vite", icon: "vite.svg" },
       { name: "Jest", icon: "jest.svg" },
       { name: "Docker", icon: "docker.svg" },
+      { name: "AWS", icon: "aws.svg" },
       { name: "Vercel", icon: "vercel.svg" },
       { name: "Figma", icon: "figma.svg" },
     ],
