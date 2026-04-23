@@ -93,8 +93,7 @@ Menos tradução, mais entrega
   {
     slug: "de-programador-a-tony-stark",
     title: "Vibe Code + Tony Stark",
-    description:
-      "A crise de usar IA pra tudo e não saber se tá evoluindo ou ficando dependente",
+    description: "Produtividade com IA VS domínio de código no fluxo real",
     image: "/blog/ironman.gif",
     date: "2026-03-05",
     author: "Caio Bittencourt",
@@ -135,7 +134,7 @@ Talvez daqui uns anos eu leia isso e pense "que drama" ou talvez pense "eu avise
   {
     slug: "ads-ou-engenharia-de-software",
     title: "ADS || Engenharia de Software?",
-    description: `Confissões de quem tá no meio do curso de ADS e bateu a crise existencial de querer ser "engenheiro"`,
+    description: "Dilema entre ADS e Engenharia",
     image: "/blog/engenheiro.jpg",
     date: "2026-03-01",
     author: "Caio Bittencourt",
@@ -179,7 +178,7 @@ Se eu for honesto comigo mesmo sei que vou continuar ADS, terminar logo e deixar
   },
   {
     slug: "por-que-esse-blog-existe",
-    title: "Por que esse blog existe",
+    title: "Esse blog não é pra você",
     description: "Isso aqui é mais um diário pessoal do que um blog de verdade",
     image: "/blog/eminem.gif",
     date: "2026-02-25",
