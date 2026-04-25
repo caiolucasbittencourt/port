@@ -37,7 +37,7 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
   },
   {
     title: "Banco de Dados",
-    description: "Banco de dados, ORM e plataformas BaaS",
+    description: "SGBDs, ORMs e plataformas BaaS",
     technologies: [
       { name: "PostgreSQL", icon: "postgreSQL.svg" },
       { name: "MySQL", icon: "mySQL.svg" },
