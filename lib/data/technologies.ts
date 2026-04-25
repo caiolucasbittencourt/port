@@ -42,7 +42,7 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
       { name: "PostgreSQL", icon: "postgreSQL.svg" },
       { name: "MySQL", icon: "mySQL.svg" },
       { name: "MongoDB", icon: "mongodb.svg" },
-      { name: "Prisma", icon: "prisma.png" },
+      { name: "Prisma ORM", icon: "prisma.png" },
       { name: "Firebase", icon: "firebase.svg" },
       { name: "Supabase", icon: "supabase.svg" },
     ],
