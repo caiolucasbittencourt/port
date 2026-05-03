@@ -17,195 +17,169 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "o-peixe-babel-definitivo-front-e-back-falando-o-mesmo-idioma",
     title: "BABEL FISH",
     description:
-      "Como a unificação da stack elimina o atrito e reduz o custo cognitivo",
+      "Stack única reduz atrito, alinha contratos e corta ruído operacional",
     image: "/blog/babelfish.gif",
     date: "2026-04-22",
     author: "Caio Bittencourt",
     readTime: "6 min",
     tags: ["JavaScript", "TypeScript", "Node.js", "Arquitetura", "Opinião"],
     content: `
-## O que é o babel fish (versão dev)?
+## Babel fish para devs
 
-No Guia do Mochileiro das Galáxias, o babel fish é um bicho que traduz qualquer idioma em tempo real
+No Guia do Mochileiro das Galáxias, o babel fish traduz qualquer idioma em tempo real. Em engenharia, JavaScript/TypeScript no front e no back elimina tradução mental. É redução de ruído.
 
-Pra mim, usar JavaScript e TypeScript no front e no back é isso. Não é sobre modinha. É sobre não passar o dia inteiro traduzindo pensamento
+### Stack fragmentada
 
-### Stack misturada
+Já trabalhei com front em uma linguagem e back em outra. Funciona, mas cansa.
 
-Eu já trabalhei no esquema front em uma linguagem e back em outra. Funciona, claro. Só que cansa mais do que parece
+Quando o cérebro finalmente entra no modo do front, você troca para o back e perde contexto.
 
-Quando eu engrenava no jeito de pensar de um lado, precisava trocar o chip pro outro. No fim do dia eu tava morto
+O código vira detalhe.
 
-E o pior nem era escrever código
+- Validação duplicada em camadas diferentes
 
-- Validação repetida
+- Tipos com nomes incompatíveis para a mesma entidade
 
-- Tipo com nome diferente em cada lado
+- Bug sem dono, empurrado entre times
 
-- Bug que "não é do front" e também "não é do back"
+### JavaScript/TypeScript ponta a ponta
 
-Esse empurra-empurra de bug me chateia num nível...
+Depois que padronizei em JavaScript/TypeScript, o drama acabou.
 
-### Quando tudo é JS/TS
+- **Mesmo modelo mental** Função, objeto, async, promise. Um vocabulário só.
+- **Tipos ponta a ponta** Contratos compartilhados reduzem divergência e retrabalho.
+- **Código reutilizável de verdade** Schema, validação, utilitário e regra moram no mesmo lugar.
+- **Onboarding mais rápido** Menos contexto, mais entrega.
 
-Depois que padronizei em JS/TS, algumas coisas ficaram menos dramáticas
+A energia vai para arquitetura, produto e experiência. Não para tradução.
 
-- **Mesmo modelo mental** Função, objeto, async, promise. A base é a mesma em qualquer camada
-- **Tipos de ponta a ponta** Com TypeScript, dá pra compartilhar contratos e reduzir aquele clássico "funciona aqui, quebra ali"
-- **Código compartilhado de verdade** Schemas, validações, utilitários e regras podem viver em um lugar só
-- **Onboarding mais rápido** Menos contexto pra aprender, mais tempo construindo coisa útil
+### Node.js como ferramenta base
 
-No fim, sua energia vai pra arquitetura, produto e experiência
+No Guia, a toalha é o item indispensável. Para mim, isso virou o Node.js.
 
-### A toalha do Node.js
+Precisa subir API rápido? Node.
 
-No Guia, a toalha é considerada "o item mais indispensável para um viajante interestelar"
+Precisa integrar com o front? Node.
 
-No meu mundo, Node.js virou isso
+Time pequeno, prazo curto, pouca margem de erro? Node com TypeScript.
 
-Precisou subir API rápido? Node
+### "Outras linguagens são piores?"
 
-Precisou integrar com o front? Node
+Não. Existem cenários em que GO, C#, Java, Python e outras opções são melhores. Não é cruzada religiosa, é pragmatismo: se você pode reduzir custo cognitivo, reduza.
 
-Preciso manter ritmo com time pequeno? Node com TypeScript normalmente resolve sem muita firula
+No cotidiano, o que mata time raramente é performance. É atrito.
 
-### "Então qualquer outra linguagem é ruim?"
-
-Não, claro que não
-
-Tem cenário em que Go, C#, Java, Python e várias outras opções fazem mais sentido
-
-Não tô tentando converter ninguém. Só defendendo uma coisa simples, se você pode reduzir custo cognitivo, reduza
-
-No dia a dia, o que quebra time nem sempre é performance. Muitas vezes é atrito
-
-### IN SHORT
-
-Front e back no mesmo idioma não te transforma em gênio
-
-Mas corta ruído, reduz retrabalho e deixa mais energia pra decidir o que realmente importa
-
-No fim era só isso
-
-Menos tradução, mais entrega
+Front e back no mesmo idioma não te transforma em gênio. Só corta ruído, reduz retrabalho e libera tempo mental. Menos tradução, mais entrega.
     `,
   },
   {
     slug: "de-programador-a-tony-stark",
-    title: "Vibe Code + Tony Stark",
-    description: "Produtividade com IA VS domínio de código no fluxo real",
+    title: "A Síndrome de Tony Stark",
+    description: "IA acelera entrega, mas fragiliza entendimento",
     image: "/blog/ironman.gif",
     date: "2026-03-05",
     author: "Caio Bittencourt",
     readTime: "5 min",
     tags: ["IA", "Carreira", "Opinião"],
     content: `
-## Eu uso IA pra tudo e tô com medo
+## Eu uso IA pra tudo
 
-O que me fez pensar sobre isso foi um post do Akita (<a href="https://akitaonrails.com/2026/03/05/37-dias-de-imers%C3%A3o-em-vibe-coding-conclus%C3%A3o-quanto-a-modelos-de-neg%C3%B3cio/" target="_blank">clica aqui se quiser ler</a>). Até ele que parecia ser totalmente contra o uso de IA (pelo menos era essa a impressão que eu tinha dele) agora tá usando pra tudo
+O gatilho foi um post do Akita (<a href="https://akitaonrails.com/2026/03/05/37-dias-de-imers%C3%A3o-em-vibe-coding-conclus%C3%A3o-quanto-a-modelos-de-neg%C3%B3cio/" target="_blank">37 dias de Imersão em Vibe Coding: Conclusão quanto a Modelos de Negócio</a>).
 
-Então se até ele cedeu quem sou eu na fila do pão
+A promessa do "vibe coding" é simples: você descreve e a IA entrega. Parece liberdade. Na prática, às vezes parece terceirização do próprio cérebro.
 
-A ideia do "vibe coding" é que você não precisa mais programar de verdade, você só diz o que quer (prompt) e a IA faz. Parece libertador na teoria mas na prática às vezes me sinto uma fraude
+### Quando funciona parece trapaça
 
-### Quando funciona é tipo mágica
+Eu descrevo a feature e o código aparece. Ajusto um detalhe e em meia hora tenho algo que levaria um dia. É o J.A.R.V.I.S em modo utilitário.
 
-Eu penso na feature, descrevo pra IA e o código aparece. Ajusto aqui e ali e em meia hora tá pronto algo que levaria 1 dia inteiro. Me sinto o Homem de Ferro com o J.A.R.V.I.S
+Sobra tempo para arquitetura, UX e decisão.
 
-Sobra tempo pra eu pensar na arquitetura, na UX e no que realmente importa. Pelo menos é o que eu digo pra mim mesmo
+### Sem IA
 
-### Sou inútil sem IA?
+Eu ainda sei programar sem IA?
 
-Eu ainda sei programar de verdade? Se tirarem a IA de mim eu consigo entregar?
+Às vezes pego um trecho que ela escreveu e percebo que não sei explicar cada linha. Funciona, mas eu não domino. Isso é produtividade ou risco operacional?
 
-Às vezes pego um código que a IA gerou e percebo que não entendi metade do que tá ali. Funciona mas eu não saberia explicar cada linha
+Ignorar IA hoje é loucura. Depender cegamente é suicídio técnico.
 
-Será que eu tô aprendendo ou só terceirizando meu cérebro?
+Continuo usando. Continuo produzindo. Continuo desconfiando.
 
-### No fim das contas
-
-Ignorar IA hoje é burrice. Mas confiar cegamente é roleta russa
-
-Por enquanto continuo usando. Continuo me sentindo produtivo. Continuo com a síndrome do impostor
-
-Talvez daqui uns anos eu leia isso e pense "que drama" ou talvez pense "eu avisei". Não sei qual prefiro
+Talvez eu releia isso daqui a alguns anos e ache drama.
     `,
   },
   {
     slug: "ads-ou-engenharia-de-software",
-    title: "ADS || Engenharia de Software?",
-    description: "Dilema entre ADS e Engenharia",
+    title: "ADS x Engenharia",
+    description: "Ego pesa e mercado cobra execução",
     image: "/blog/engenheiro.jpg",
     date: "2026-03-01",
     author: "Caio Bittencourt",
     readTime: "4 min",
     tags: ["Carreira", "Faculdade", "Opinião"],
     content: `
-## Ser engenheiro (só pelo título)
+## Ser engenheiro
 
-Eu tô no 3º semestre de Análise e Desenvolvimento de Sistemas, metade do curso. Mas e se eu transferisse pra Engenharia de Software?
+Estou no 3º semestre de Análise e Desenvolvimento de Sistemas. E a ideia de migrar para Engenharia de Software aparece. O motivo é simples e feio, o título soa melhor.
 
-Por quê? Porque "Engenheiro de Software" soa mais chique. É isso. Essa é a razão. Patético né?
+### Motivos reais
 
-### Por que eu quero isso de verdade
+Vamos ser diretos sobre os motivos reais dessa crise.
 
-Vamos ser sinceros sobre os motivos reais dessa crise
+- **O título** "Engenheiro" parece mais sério do que "tecnólogo". Vaidade explícita.
+- **O LinkedIn** Nome forte chama mais clique, e recrutador lê isso.
+- **A dúvida** Será que um tecnólogo fecha portas?
 
-- **O título** "Sou engenheiro" tem um peso diferente de "Sou tecnólogo". Talvez não devesse ter mas tem
-- **O LinkedIn** Engenheiro de Software soa mais foda no perfil. Eu sei que é vaidade mas também sei que recrutador olha essas coisas
-- **A dúvida** Será que eu tô me limitando com um tecnólogo? Será que portas vão se fechar?
+### Contra-argumentos
 
-### Mas aí eu paro pra pensar
+- Já estou no meio de ADS. Trocar agora é recomeçar.
+- O meu trabalho diário não muda. Código é código e o React não lê diploma.
+- Engenharia são 5 anos e ADS 2,5. Tempo e dinheiro são finitos.
 
-- Já tô na metade de ADS. Trocar agora significa basicamente recomeçar
-- O que eu faço no dia a dia não muda. Código é código e o React não liga pro meu diploma
-- Engenharia são 5 anos e ADS são 2,5. Tempo é dinheiro literalmente
+Na prática, o mercado cobra entrega. Nome de curso é nota de rodapé.
 
-Na prática o mercado de tech se importa mais com o que você sabe fazer do que com o nome do seu curso. Pelo menos é o que dizem
+### Ego ou estratégia?
 
-### Ego ou carreira?
+Essa crise é mais ego do que estratégia. Eu quero o título bonito ou quero ser um bom desenvolvedor? Uma coisa não garante a outra.
 
-Provavelmente essa crise é mais sobre ego do que sobre carreira. Eu quero o título bonito ou eu quero ser um bom desenvolvedor? Porque uma coisa não depende da outra
+### Plano B
 
-### O plano B que me conforta
+Terminar ADS e depois fazer uma pós em Engenharia de Software. Credencial extra.
 
-Uma ideia que me conforta é fazer uma pós em Engenharia de Software depois. Tipo termino ADS rápido e faço uma especialização pra "compensar"
+### Decisão provável
 
-### Provavelmente vou continuar ADS
-
-Se eu for honesto comigo mesmo sei que vou continuar ADS, terminar logo e deixar meu trabalho falar por mim
+Se eu for honesto comigo mesmo, vou terminar ADS e deixar meu trabalho falar por mim.
     `,
   },
   {
     slug: "por-que-esse-blog-existe",
-    title: "Esse blog não é pra você",
-    description: "Isso aqui é mais um diário pessoal do que um blog de verdade",
+    title: "Este blog é um caderno público",
+    description: "Diário técnico, sem promessa de didática",
     image: "/blog/eminem.gif",
     date: "2026-02-25",
     author: "Caio Bittencourt",
     readTime: "3 min",
     tags: ["Pessoal", "Meta", "Introdução"],
     content: `
-## May i have your attention, please?
+## Atenção, sem desculpas
 
-Esse blog existe por um motivo bem egoísta. Eu precisava de um lugar pra organizar meus pensamentos sobre tecnologia e ao invés de escrever num bloco de notas que eu ia perder decidi colocar num site. Pelo menos assim eu pratico fazer deploy
+Este blog existe com o propósito egoísta de organizar meus pensamentos. Em vez de escrever num bloco de notas e arriscar perder tudo, preferi publicar e treinar deploy.
 
-### Isso aqui não é tutorial
+### Não é tutorial
 
-Não vou fingir que isso é um blog profissional com conteúdo educacional de qualidade, tem MUITO material melhor por aí se você quer aprender algo
+Não finjo que isso é conteúdo educacional. Se você quer aprender, há material muito melhor por aí.
 
-O que você vai encontrar aqui
-- Opiniões que provavelmente vão mudar em 6 meses
-- Reflexões sobre ferramentas e tecnologias que eu uso
-- Celebrações de pequenas vitórias que só fazem sentido pra mim
+O que aparece aqui
+- Opiniões que mudam rápido
+- Reflexões sobre ferramentas que eu uso
+- Pequenas vitórias que só fazem sentido pra mim
 
-### Se é diário por que não deixar privado?
+### "Se é só pra você, por que publicar?"
 
-Honestamente? Porque colocar as coisas em público me obriga a pensar melhor antes de escrever. Vai que eu leio isso daqui 5 anos e dou risada de como eu era burro (muito provável)
+Porque publicar me força a pensar antes de escrever. Eu vou rir de muita coisa daqui a alguns anos.
 
-### Você não precisa concordar comigo
+### Discordar não muda nada
 
-Você não precisa concordar com nada que eu escrevo aqui. Não precisa gostar. Na real não precisa nem ler. Isso aqui é mais pra mim do que pra qualquer outra pessoa
+Não precisa concordar. Não precisa gostar. Não precisa ler. Isso aqui é mais pra mim do que pra você.
     `,
   },
 ];
