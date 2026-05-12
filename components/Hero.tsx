@@ -5,9 +5,9 @@ export default function Hero() {
     <section className="hover-card rounded-xl p-8 text-justify">
       <p className="text-lg leading-relaxed font-light text-gray-500 md:text-xl">
         <span className="font-medium text-white">Desenvolvedor Full-Stack</span>{" "}
-        e graduando em{" "}
+        e{" "}
         <span className="font-medium text-white">
-          Análise e Desenvolvimento de Sistemas
+          graduando em Análise e Desenvolvimento de Sistemas
         </span>
         , capacitado para atuar em todas as etapas de um projeto de software.
         <br />
