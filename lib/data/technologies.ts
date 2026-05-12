@@ -15,8 +15,8 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
     title: "Front-end",
     description: "Linguagens, frameworks e bibliotecas de interface",
     technologies: [
-      { name: "HTML", icon: "HTML.svg" },
-      { name: "CSS", icon: "CSS.svg" },
+      { name: "HTML", icon: "html.svg" },
+      { name: "CSS", icon: "css.svg" },
       { name: "JavaScript", icon: "javascript.svg" },
       { name: "TypeScript", icon: "typescript.svg" },
       { name: "React", icon: "react.svg" },
@@ -37,7 +37,7 @@ export const TECHNOLOGY_CATEGORIES: TechnologyCategory[] = [
     title: "Banco de Dados",
     description: "SGBDs e ORMs",
     technologies: [
-      { name: "PostgreSQL", icon: "postgreSQL.svg" },
+      { name: "PostgreSQL", icon: "postgresql.svg" },
       { name: "MongoDB", icon: "mongodb.svg" },
       { name: "Prisma", icon: "prisma.png" },
     ],

@@ -17,7 +17,7 @@ export default function TechStack() {
         {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech, i) => (
           <div key={i} className="relative h-8 w-8 shrink-0 md:h-10 md:w-10">
             <Image
-              src={`/${tech}`}
+              src={`/${tech.toLowerCase()}`}
               alt="Tech icon"
               fill
               className={`object-contain opacity-60 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 ${

@@ -1,7 +1,7 @@
 // Technologies displayed in TechStack component
 export const TECHNOLOGIES = [
-  "HTML.svg",
-  "CSS.svg",
+  "html.svg",
+  "css.svg",
   "javascript.svg",
   "typescript.svg",
   "react.svg",
@@ -10,7 +10,7 @@ export const TECHNOLOGIES = [
   "nodejs.png",
   "expressjs.png",
   "nestjs.svg",
-  "postgreSQL.svg",
+  "postgresql.svg",
   "mongodb.svg",
   "prisma.png",
   "git.svg",
@@ -38,10 +38,10 @@ export const formatTechName = (filename: string): string => {
     typescript: "TypeScript",
     tailwindcss: "Tailwind CSS",
     mongodb: "MongoDB",
-    postgreSQL: "PostgreSQL",
-    HTML: "HTML",
-    CSS: "CSS",
-    Jest: "Jest",
+    postgresql: "PostgreSQL",
+    html: "HTML",
+    css: "CSS",
+    jest: "Jest",
   };
 
   if (exceptions[name]) return exceptions[name];

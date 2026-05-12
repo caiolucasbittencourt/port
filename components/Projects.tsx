@@ -31,7 +31,7 @@ export default function Projects() {
               {project.stack.map((tech, i) => (
                 <div key={i} className="relative h-5 w-5">
                   <Image
-                    src={`/${tech}`}
+                    src={`/${tech.toLowerCase()}`}
                     alt="tech"
                     fill
                     className={`object-contain opacity-60 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0 ${

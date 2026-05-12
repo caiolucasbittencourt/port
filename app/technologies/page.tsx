@@ -47,7 +47,7 @@ function TechnologyItem({ name, icon }: { name: string; icon: string }) {
           </span>
         ) : (
           <Image
-            src={`/${icon}`}
+            src={`/${icon.toLowerCase()}`}
             alt={name}
             fill
             sizes="28px"
