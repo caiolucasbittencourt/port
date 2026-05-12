@@ -1,8 +1,7 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { SOCIAL_CARDS } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -10,27 +9,27 @@ export default function Footer() {
       <div className="flex items-center justify-between pt-4">
         {/* Copyright */}
         <p className="text-sm text-gray-500">
-          © {new Date().getFullYear()} Caio Bittencourt
+          {"\u00A9"} {new Date().getFullYear()} Caio Bittencourt
         </p>
 
-        {/* Social Icons */}
-        <div className="flex items-center gap-4">
-          {SOCIAL_CARDS.map((social) => (
-            <Link
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              className="relative h-5 w-5 opacity-50 transition-opacity hover:opacity-100"
-            >
-              <Image
-                src={social.icon}
-                alt={social.name}
-                fill
-                className={`object-contain ${social.invert ? "invert" : ""}`}
-              />
-            </Link>
-          ))}
-        </div>
+        <Link
+          href="https://indique-um-amigo.hostgator.com.br/caiolucasbittencourt!4c06a1c3d1!a?locale=pt"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-1 text-xs text-gray-500 transition-colors hover:text-gray-300 sm:text-sm"
+        >
+          <span className="hidden sm:inline">
+            {"Site r\u00E1pido e seguro? V\u00E1 de"}
+          </span>
+          <span className="relative h-4 w-20 sm:h-5 sm:w-24">
+            <Image
+              src="/hostgator.svg"
+              alt="HostGator"
+              fill
+              className="object-contain brightness-0 invert transition-[filter] group-hover:brightness-100 group-hover:invert-0"
+            />
+          </span>
+        </Link>
       </div>
     </footer>
   );
