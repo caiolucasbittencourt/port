@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Header from "../components/Header";
 import SocialCards from "../components/SocialCards";
 import Hero from "../components/Hero";
 import TechStack from "../components/TechStack";
-import BlogPosts from "../components/BlogPosts";
 import Footer from "../components/Footer";
 
 const containerVariants = {
@@ -45,12 +45,11 @@ export default function Home() {
           </motion.section>
 
           <motion.section variants={itemVariants}>
-            <TechStack />
+            <Link href="/technologies" aria-label="Ir para página de tecnologias">
+              <TechStack />
+            </Link>
           </motion.section>
 
-          <motion.section variants={itemVariants}>
-            <BlogPosts />
-          </motion.section>
         </motion.div>
 
         <Footer />

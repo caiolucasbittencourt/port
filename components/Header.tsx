@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { X, Menu } from "lucide-react";
-import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -80,12 +80,6 @@ export default function Header() {
             >
               Projetos
             </Link>
-            <Link
-              href="/blog"
-              className="text-sm text-gray-400 transition-colors hover:text-white"
-            >
-              Blog
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -140,21 +134,14 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className="text-lg text-gray-400 transition-colors hover:text-white"
                 >
-                  Technologies
+                  Tecnologias
                 </Link>
                 <Link
                   href="/projects"
                   onClick={() => setIsMenuOpen(false)}
                   className="text-lg text-gray-400 transition-colors hover:text-white"
                 >
-                  Projects
-                </Link>
-                <Link
-                  href="/blog"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-lg text-gray-400 transition-colors hover:text-white"
-                >
-                  Blog
+                  Projetos
                 </Link>
               </nav>
             </motion.div>
