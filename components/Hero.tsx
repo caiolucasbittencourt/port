@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="hover-card rounded-xl p-8 text-justify">
       <p className="text-lg leading-relaxed font-light text-gray-500 md:text-xl">
-        <span className="font-medium text-white">Desenvolvedor Full-Stack</span>{" "}
+        <span className="font-medium text-white">Desenvolvedor Full-stack</span>{" "}
         e{" "}
         <span className="font-medium text-white">
           graduando em Análise e Desenvolvimento de Sistemas
