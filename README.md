@@ -1,30 +1,21 @@
-# Site Pessoal
+# Portfólio
 
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=FFFFFF)
+![React](https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=3178C6)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-000000?style=for-the-badge&logo=tailwind-css&logoColor=06B6D4)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-000000?style=for-the-badge&logo=framer&logoColor=0055FF)
 
-Site pessoal onde compartilho minhas ideias, projetos e posts, servindo como um espaço livre para registrar minhas experiências, aprendizados e o que mais eu quiser.
+Portfólio desenvolvido com foco em navegação rápida e objetiva.
 
 ## Tecnologias
 
-- **Next.js** (App Router + Server Components)
-- **React** (Hooks para lógica do jogo e estados de UI)
-- **TypeScript** (Tipagem estática e interfaces para o RPG)
-- **Tailwind CSS** (Estilização responsiva Mobile-First)
-- **Framer Motion** (Animações de entrada, scroll infinito e modais)
-- **Lucide React** (Ícones otimizados)
-
-### Funcionalidades
-
-- **Home com identidade pessoal:** Apresentação principal com foco em branding e conteúdo.
-- **Blog pessoal:** Publicação de textos e reflexões em páginas dedicadas por post.
-- **Tech Stack interativo:** Carrossel infinito de tecnologias com modal detalhado e suporte a temas.
-- **RPG "Save the Village":** Lógica completa no cliente, com batalha, loja, inventário e progressão de nível.
-- **Newsletter:** Formulário integrado com feedback visual de status (Loading, Sucesso, Erro).
-- **Design responsivo:** Layout adaptável para dispositivos móveis, tablets e desktops.
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide React**
 
 ### Pré-requisitos
 
@@ -33,15 +24,19 @@ Site pessoal onde compartilho minhas ideias, projetos e posts, servindo como um 
 ### Instalação
 
 ```bash
-git clone https://github.com/caiolucasbittencourt/port.git
-cd port
+git clone https://github.com/caiolucasbittencourt/portfolio.git
+cd portfolio
 npm install
 npm run dev
 ```
 
-### Scripts úteis
+### Scripts
 
 - `npm run dev` inicia o ambiente de desenvolvimento.
 - `npm run build` gera a versão de produção.
 - `npm run start` executa a aplicação em modo produção.
 - `npm run lint` verifica padrões de código com ESLint.
+
+### Licença
+
+Este projeto está licenciado sob a licença MIT.
